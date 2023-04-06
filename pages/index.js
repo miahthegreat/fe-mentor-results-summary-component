@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import Reaction from "@/icons/Reaction";
+import Memory from "@/icons/Memory";
+import Verbal from "@/icons/Verbal";
+import Visual from "@/icons/Visual";
 
 export default function Home() {
   return (
@@ -14,110 +13,74 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main className="grid min-h-screen md:mx-auto md:max-w-2xl md:content-center md:items-center md:justify-center">
+        <div className="grid md:grid-cols-2 md:content-center md:items-center md:justify-center md:rounded-3xl md:bg-white md:shadow-sm">
+          <div className="to-[hsl(241,81%,54%) grid gap-8 rounded-b-2xl bg-gradient-to-t from-[hsl(241,81%,54%)] to-[hsl(252,100%,67%)] px-12 py-12 md:max-w-lg md:content-center md:justify-center md:rounded-3xl">
+            <h1 className="text-center text-xl font-bold text-[hsl(251,100%,87%)]">
+              Your Result
+            </h1>
+            <div className="mx-auto flex aspect-square w-40 flex-col items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[hsla(256,72%,46%,1)] to-[hsla(241,72%,46%,0)]">
+              <span className="text-6xl font-bold text-white">76</span>
+              <span className="text-gray-400">of 100</span>
+            </div>
+            <div className="grid content-center items-center justify-center gap-4 text-center">
+              <p className="text-3xl text-white">Great</p>
+              <p className="max-w-[17rem] text-base text-[hsl(251,100%,87%)]">
+                You scored higher than 65% of the people who have taken these
+                tests.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          <div className="grid gap-4 px-8 py-4">
+            <h2 className="text-lg font-bold md:text-xl">Summary</h2>
+            <div className="grid gap-4">
+              <div className="flex items-center justify-between rounded-lg bg-[hsla(355,45%,62%,0.1)] p-4">
+                <div className="flex items-center gap-2 text-[hsla(355,45%,62%,1)]">
+                  <Reaction />
+                  <span>Reaction</span>
+                </div>
+                <div>
+                  <span>80</span>
+                  <span className="text-[hsl(340,5%,65%)]"> / 100</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between rounded-lg bg-[hsla(39,67%,63%,0.1)] p-4">
+                <div className="flex items-center gap-2 text-[hsl(39,67%,63%)]">
+                  <Memory />
+                  <span>Memory</span>
+                </div>
+                <div>
+                  <span>92</span>
+                  <span className="text-[hsl(340,5%,65%)]"> / 100</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between rounded-lg bg-[hsla(164,45%,41%,0.1)] p-4">
+                <div className="flex items-center gap-2 text-[hsl(164,45%,41%)]">
+                  <Verbal />
+                  <span>Verbal</span>
+                </div>
+                <div>
+                  <span>61</span>
+                  <span className="text-[hsl(340,5%,65%)]"> / 100</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between rounded-lg bg-[hsla(241,56%,42%,0.1)] p-4">
+                <div className="flex items-center gap-2 text-[hsl(241,56%,42%)]">
+                  <Visual />
+                  <span>Visual</span>
+                </div>
+                <div>
+                  <span>72</span>
+                  <span className="text-[hsl(340,5%,65%)]"> / 100</span>
+                </div>
+              </div>
+            </div>
+            <button className="w-full rounded-full bg-[hsla(224,30%,27%,1)] p-4 text-white transition-colors duration-200 ease-in hover:bg-[hsla(224,30%,27%,0.9)]">
+              Continue
+            </button>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
         </div>
       </main>
     </>
-  )
+  );
 }
