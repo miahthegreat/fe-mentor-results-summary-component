@@ -21,7 +21,7 @@ const hankenGrotesk = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${hankenGrotesk.variable} font-sans bg-gray-50`}>
+    <div className={`${hankenGrotesk.variable} bg-white font-sans`}>
       <Component {...pageProps} />
     </div>
   );
